@@ -3,14 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'todo-input-button-unit',
   template: `
-    <p>
-      input-button-unit works!
-      The title is: {{ title }}
-    </p>
 
-    <input [value]="title"
+
+    <input #inputElementRef
+    [value]="title"
     (keyup.enter)="changeTitle($event.target.value)">
-    <button (click)="changeTitle('Button Clicked!')">
+    <button (click)="changeTitle(inputElementRef.value)">
       Save
     </button>
   `,
