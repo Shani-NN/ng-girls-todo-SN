@@ -3,7 +3,9 @@ import { TodoItem } from '../interfaces/todo-item';
 @Component({
   selector: 'todo-todo-item',
   template: `
-    {{ item.title }}
+    <div class="todo-item">
+      {{ item.title }}
+</div>
   `,
   styleUrls: ['./todo-item.component.css']
 })
